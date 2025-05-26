@@ -1,4 +1,4 @@
-#include "stack_list.h"
+#include "stack.h"
 
 
 Stack * new_stack(){

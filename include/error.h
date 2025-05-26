@@ -6,6 +6,7 @@ typedef enum Error {
 	ALL_GOOD,
 	MEMORY_ERROR,
 	EMPTY_STRUCTURE,
+	FULL_STRUCTURE,
 } Error;
 
 #endif
