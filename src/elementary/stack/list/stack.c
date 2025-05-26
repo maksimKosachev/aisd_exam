@@ -66,7 +66,7 @@ Error pop_stack(Stack * stack, int * output){
     if (!stack || !output) return MEMORY_ERROR;
 
     if (!stack->head) return EMPTY_STRUCTURE;
-
+    
     Node * to_delete = stack->head;
     *output = stack->head->data;
     stack->head = stack->head->next;
