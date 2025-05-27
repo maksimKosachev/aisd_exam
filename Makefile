@@ -5,7 +5,7 @@ CFLAGS = -Isrc -Wall -Wextra -Wpedantic -g
 
 # Поддерживаемые структуры и реализации в каждом разделе
 UNITS = elementary
-elementary_STRUCTURES = stack queue
+elementary_STRUCTURES = stack linear_queue
 IMPLEMENTATIONS = list vector
 
 
