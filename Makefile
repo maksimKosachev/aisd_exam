@@ -36,8 +36,7 @@ test/%:
 	FILE=$${STRUCTURE}_$${IMPLEMENTATION}_test; \
 	TEST_SRC=tests/$$SECTION/$$STRUCTURE/$$FILE.c; \
 	if [ ! -f $$TEST_SRC ]; then \
-	echo "❌ Файл теста не найден: $$TEST_SRC"; exit 1; \
-	fi; \
+	echo "❌ Файл теста не найден: $$TEST_SRC"; exit 1; fi; \
 	TEST_OBJ=build/tests/obj/$$FILE.o; \
 	TEST_BIN=build/tests/bin/$$FILE; \
 	LIB="-Lbuild/bin -l$$STRUCTURE"; \
