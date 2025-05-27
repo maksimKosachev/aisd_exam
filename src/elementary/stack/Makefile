@@ -5,8 +5,8 @@ CFLAGS = -I../../include -Wall -Wextra -Wpedantic -g
 # Пути
 BUILD_OBJ = ../../../build/obj
 BUILD_BIN = ../../../build/bin
-VECTOR_LIB = $(BUILD_BIN)/libstack_list.a
-LIST_LIB = $(BUILD_BIN)/libstack_vector.a
+VECTOR_LIB = $(BUILD_BIN)/libstack_vector.a
+LIST_LIB = $(BUILD_BIN)/libstack_list.a
 
 # Название объектных файлов
 OBJ_LIST = $(BUILD_OBJ)/stack_list.o
