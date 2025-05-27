@@ -1,12 +1,13 @@
-#include "../../src/elementary/stack/list/stack.h"
+#include "../../../src/elementary/stack/vector/stack.h"
 
 
 int main(){
-    Stack * stack = new_stack();
+    size_t capacity = 10;
+    Stack * stack = new_stack(capacity);
     if (!stack) return 1;
 
     push_stack(stack, 1);
-    push_stack(stack, 2);
+    push_stack(stack, 21231232);
     
     print_stack(stack);
 

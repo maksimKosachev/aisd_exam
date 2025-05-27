@@ -14,12 +14,12 @@ OBJ_VECTOR = $(BUILD_OBJ)/stack_vector.o
 # Сборка стека на списке
 list: $(OBJ_LIST)
 	@mkdir -p $(BUILD_BIN)
-	ar rcs $(LIB) $(OBJ_LIST)
+	@ar rcs $(LIB) $(OBJ_LIST)
 
 # Сборка стека на векторе
 vector: $(OBJ_VECTOR)
 	@mkdir -p $(BUILD_BIN)
-	ar rcs $(LIB) $(OBJ_VECTOR)
+	@ar rcs $(LIB) $(OBJ_VECTOR)
 
 # Компиляция объектных файлов
 $(OBJ_LIST): list/stack.c

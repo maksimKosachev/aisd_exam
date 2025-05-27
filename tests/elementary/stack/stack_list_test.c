@@ -1,9 +1,8 @@
-#include "../../src/elementary/stack/vector/stack.h"
+#include "../../../src/elementary/stack/list/stack.h"
 
 
 int main(){
-    size_t capacity = 10;
-    Stack * stack = new_stack(capacity);
+    Stack * stack = new_stack();
     if (!stack) return 1;
 
     push_stack(stack, 1);
