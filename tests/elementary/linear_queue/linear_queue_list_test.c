@@ -1,28 +1,28 @@
 #include "../../../src/elementary/linear_queue/list/linear_queue.h"
-
+#include "assert.h"
 
 int main(){
     Queue * queue = new_queue();
 
-    enqueue(queue, 2);
-    enqueue(queue, 3);
-    enqueue(queue, 4);
-    enqueue(queue, 5);
-    enqueue(queue, 6);
-    enqueue(queue, 7);
+    assert(enqueue(queue, 2) == ALL_GOOD);
+    assert(enqueue(queue, 3) == ALL_GOOD);
+    assert(enqueue(queue, 4) == ALL_GOOD);
+    assert(enqueue(queue, 5) == ALL_GOOD);
+    assert(enqueue(queue, 6) == ALL_GOOD);
+    assert(enqueue(queue, 7) == ALL_GOOD);
 
     print_queue(queue);
     int dummy;
-    dequeue(queue, &dummy);
-    dequeue(queue, &dummy); 
-    dequeue(queue, &dummy);
-    dequeue(queue, &dummy);
-    dequeue(queue, &dummy);
-    dequeue(queue, &dummy);
+    assert(dequeue(queue, &dummy) == ALL_GOOD);
+    assert(dequeue(queue, &dummy) == ALL_GOOD); 
+    assert(dequeue(queue, &dummy) == ALL_GOOD);
+    assert(dequeue(queue, &dummy) == ALL_GOOD);
+    assert(dequeue(queue, &dummy) == ALL_GOOD);
+    assert(dequeue(queue, &dummy) == ALL_GOOD);
 
     print_queue(queue);
 
-    enqueue(queue, 1);
+    assert(enqueue(queue, 1) == ALL_GOOD);
     print_queue(queue);
 
     free_queue(queue);

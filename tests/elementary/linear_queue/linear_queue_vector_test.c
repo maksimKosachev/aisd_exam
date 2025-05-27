@@ -1,5 +1,5 @@
 #include "../../../src/elementary/linear_queue/vector/linear_queue.h"
-
+#include <assert.h>
 
 int main(){
     size_t capacity = 2;
@@ -7,20 +7,16 @@ int main(){
 
     print_queue(queue);
     int d;
-    dequeue(queue, &d);
-    enqueue(queue, 1);
-    enqueue(queue, 2);
+    assert(dequeue(queue, &d) == EMPTY_STRUCTURE);
+    assert(enqueue(queue, 1) == ALL_GOOD);
+    assert(enqueue(queue, 2) == ALL_GOOD);
     print_queue(queue);
-    // enqueue(queue, 3);
-    // print_queue(queue);
-
+   
     int dummy = 0;
-    dequeue(queue, &dummy);
-    printf("%d\n", dummy);
-    print_queue(queue);
-    dequeue(queue, &dummy);
-    printf("%d\n", dummy);
-    print_queue(queue);
+    assert(dequeue(queue, &dummy) == ALL_GOOD);
+    assert(dummy == 1);
+    assert(dequeue(queue, &dummy) == ALL_GOOD);
+    assert(dummy == 2);
     free_queue(queue);
 
     return 0;
