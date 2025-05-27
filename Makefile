@@ -39,7 +39,7 @@ test/%:
 	echo "❌ Файл теста не найден: $$TEST_SRC"; exit 1; fi; \
 	TEST_OBJ=build/tests/obj/$$FILE.o; \
 	TEST_BIN=build/tests/bin/$$FILE; \
-	LIB="-Lbuild/bin -l$$STRUCTURE"; \
+	LIB="-Lbuild/bin -l$${STRUCTURE}_$${IMPLEMENTATION}"; \
 	mkdir -p build/tests/obj build/tests/bin; \
 	echo "🧰 Компилируем $$TEST_SRC"; \
 	$(CC) $(CFLAGS) -c $$TEST_SRC -o $$TEST_OBJ; \
