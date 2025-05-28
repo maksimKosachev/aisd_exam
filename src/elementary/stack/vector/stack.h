@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <sys/types.h>
 
 #include "../../../include/error.h"
 
@@ -13,7 +14,7 @@ typedef struct Stack {
 } Stack;
 
 
-Stack * new_stack(const size_t capacity);
+Stack * new_stack(const ssize_t capacity);
 void free_stack(Stack * stack);
 void print_stack(const Stack * stack);
 Error push_stack(Stack * stack, const int data);

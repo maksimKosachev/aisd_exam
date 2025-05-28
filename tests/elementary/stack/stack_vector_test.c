@@ -3,10 +3,11 @@
 
 
 int main(void) {
-    size_t capacity = 10;
-    Stack *stack = new_stack(capacity);
+    Stack * s = new_stack(-10);
+    assert(!s);
+    Stack *stack = new_stack(10);
     assert(stack != NULL);
-    assert(stack->capacity == capacity);
+    assert(stack->capacity == 10);
     assert(stack->size == 0);
 
     assert(push_stack(stack, 1) == ALL_GOOD);

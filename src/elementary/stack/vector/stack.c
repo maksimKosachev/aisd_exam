@@ -1,14 +1,16 @@
 #include "stack.h"
 
 
-Stack * new_stack(const size_t capacity){
+Stack * new_stack(const ssize_t capacity){
+    if (capacity <= 0) return NULL;
+
     Stack * stack = malloc(sizeof(Stack));
     if (!stack) return NULL;
 
     stack->size = 0;
-    stack->capacity = capacity;
+    stack->capacity = (size_t)capacity;
 
-    stack->vector = calloc(capacity, sizeof(int));
+    stack->vector = calloc(stack->capacity, sizeof(int));
     if (!stack->vector){
         free(stack);
         return NULL;
