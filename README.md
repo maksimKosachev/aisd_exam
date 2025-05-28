@@ -47,16 +47,16 @@ $ make test/<раздел>/<структура>/<реализация>
     - [Стек](src/elementary/stack/)
         - [На векторе](src/elementary/stack/vector/)
         - [На списке](src/elementary/stack/list/)
-    - [Линейная очередь]
+    - [Линейная очередь](src/elementary/linear_queue/)
         - [На векторе](src/elementary/linear_queue/vector/)
         - [На списке](src/elementary/linear_queue/list/)
-    - [Циклическая очередь]
+    - [Циклическая очередь](src/elementary/circular_queue/)
         - [На векторе](src/elementary/circular_queue/vector/)
         - [На списке](src/elementary/circular_queue/list/)
-    - [Дек]
+    - [Дек](src/elementary/deque/)
         - [На векторе](src/elementary/deque/vector/)
         - [На списке](src/elementary/deque/list/)
-    - [Матрица]
+    - [Матрица](src/elementary/matrix/)
         - [Прямоугольная матрица(та, что из вышмата)](src/elementary/matrix/rectangular/)
 
 ## Тесты
