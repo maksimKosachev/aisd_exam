@@ -3,6 +3,9 @@
 
 
 int main() {
+    Queue * b = new_queue(-3);
+    assert(!b);
+
     Queue *q = new_queue(3);
     assert(q != NULL);
 

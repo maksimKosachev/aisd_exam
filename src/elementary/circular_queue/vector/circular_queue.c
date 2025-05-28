@@ -1,13 +1,15 @@
 #include "circular_queue.h"
 
 
-Queue * new_queue(const size_t capacity){
+Queue * new_queue(const ssize_t capacity){
+    if (capacity <= 0) return NULL;
+
     Queue * queue = malloc(sizeof(Queue));
     if (!queue) return NULL;
 
-    *queue = (Queue){0, 0, 0, capacity, NULL};
+    *queue = (Queue){0, 0, 0, (size_t)capacity, NULL};
 
-    queue->vector = calloc(capacity, sizeof(int));
+    queue->vector = calloc(queue->capacity, sizeof(int));
     if (!queue->vector){
         free(queue);
         return NULL;
