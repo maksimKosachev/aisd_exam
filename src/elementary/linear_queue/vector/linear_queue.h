@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <sys/types.h>
 
 #include "../../../include/error.h"
 
@@ -16,7 +17,7 @@ typedef struct Queue {
 } Queue;
 
 
-Queue * new_queue(const size_t capacity);
+Queue * new_queue(const ssize_t capacity);
 void free_queue(Queue * queue);
 void print_queue(const Queue * queue);
 Error enqueue(Queue * queue, const int data);

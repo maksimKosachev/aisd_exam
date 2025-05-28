@@ -2,8 +2,10 @@
 #include <assert.h>
 
 int main(){
-    size_t capacity = 2;
-    Queue * queue = new_queue(capacity);
+    Queue * queue = new_queue(-2);
+    assert(!queue);
+
+    queue = new_queue(2);
 
     print_queue(queue);
     int d;
