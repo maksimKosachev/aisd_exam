@@ -43,7 +43,7 @@ $ make test/<раздел>/<структура>/<реализация>
 
 
 ## Доступные структуры данных
-- [Элементарные структуры данных](src/elementary/) \
+- [Элементарные структуры данных](src/elementary/)
     - [Стек](src/elementary/stack/)
         - [На векторе](src/elementary/stack/vector/)
         - [На списке](src/elementary/stack/list/)
