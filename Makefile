@@ -5,8 +5,8 @@ CFLAGS = -Isrc -Wall -Wextra -Wpedantic -g
 
 # Поддерживаемые структуры и реализации в каждом разделе
 UNITS = elementary
-elementary_STRUCTURES = stack linear_queue circular_queue
-IMPLEMENTATIONS = list vector
+elementary_STRUCTURES = stack linear_queue circular_queue matrix
+IMPLEMENTATIONS = list vector jagged rectangular
 
 
 # Макрос для создания целей вида elementary/stack/list
