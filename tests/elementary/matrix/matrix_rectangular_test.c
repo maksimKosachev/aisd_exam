@@ -3,7 +3,9 @@
 
 
 int main() {
-    Matrix *a = new_matrix(2, 2);
+    Matrix *a = new_matrix(-2, -2);
+    assert(!a);
+    a = new_matrix(2, 2);
     Matrix *b = new_matrix(2, 2);
     assert(a && b);
     assert(a->m == 2 && a->n == 2);

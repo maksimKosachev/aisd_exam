@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <sys/types.h>
 
 #include "../../../include/error.h"
 
@@ -13,7 +14,7 @@ typedef struct Matrix {
 } Matrix;
 
 
-Matrix * new_matrix(const size_t m, const size_t n);
+Matrix * new_matrix(const ssize_t m, const ssize_t n);
 void free_matrix(Matrix * matrix);
 void print_matrix(const Matrix * matrix);
 Error insert_elm(Matrix * matrix, const size_t i, const size_t j, const int value);

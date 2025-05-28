@@ -1,20 +1,22 @@
 #include "matrix.h"
 
 
-Matrix * new_matrix(const size_t m, const size_t n){
+Matrix * new_matrix(const ssize_t m, const ssize_t n){
+    if (m <= 0 || n <= 0) return NULL;
+
     Matrix * matrix = malloc(sizeof(Matrix));
     if (!matrix) return NULL;
 
-    matrix->m = m;
-    matrix->n = n;
+    matrix->m = (size_t)m;
+    matrix->n = (size_t)n;
 
-    matrix->data = calloc(m, sizeof(int *));
+    matrix->data = calloc(matrix->m, sizeof(int *));
     if (!matrix->data){
         free(matrix);
         return NULL;
     }
 
-    for (size_t i = 0; i < m; i++){
+    for (size_t i = 0; i < matrix->m; i++){
         matrix->data[i] = calloc(n, sizeof(int));
     }
 
