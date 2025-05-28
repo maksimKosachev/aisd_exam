@@ -12,12 +12,12 @@ LIST_LIB = $(BUILD_BIN)/liblinear_queue_list.a
 OBJ_LIST = $(BUILD_OBJ)/linear_queue_list.o
 OBJ_VECTOR = $(BUILD_OBJ)/linear_queue_vector.o
 
-# Сборка стека на списке
+# Сборка очереди на списке
 list: $(OBJ_LIST)
 	@mkdir -p $(BUILD_BIN)
 	@ar rcs $(LIST_LIB) $(OBJ_LIST)
 
-# Сборка стека на векторе
+# Сборка очереди на векторе
 vector: $(OBJ_VECTOR)
 	@mkdir -p $(BUILD_BIN)
 	@ar rcs $(VECTOR_LIB) $(OBJ_VECTOR)
