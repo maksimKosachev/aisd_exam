@@ -7,6 +7,9 @@ typedef enum Error {
 	MEMORY_ERROR,
 	EMPTY_STRUCTURE,
 	FULL_STRUCTURE,
+	INCORRECT_KEY,
+	KEY_NOT_FOUND,
+	KEY_ALREADY_EXISTS,
 } Error;
 
 #endif

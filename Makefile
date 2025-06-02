@@ -3,10 +3,14 @@ CC = gcc
 CFLAGS = -Isrc -Wall -Wextra -Wpedantic -g
 
 
-# Поддерживаемые структуры и реализации в каждом разделе
-UNITS = elementary
+# Разделы
+UNITS = elementary tables
+
 elementary_STRUCTURES = stack linear_queue circular_queue matrix deque
-IMPLEMENTATIONS = list vector rectangular
+elementary_IMPLEMENTATIONS = list vector rectangular
+
+tables_STRUCTURES = regular index hash
+tables_IMPLEMENTATIONS = list vector double sum chain
 
 
 # Макрос для создания целей вида elementary/stack/list
@@ -20,7 +24,7 @@ endef
 # Генерируем все возможные цели
 $(foreach unit,$(UNITS), \
     $(foreach structure,$($(unit)_STRUCTURES), \
-        $(foreach implementation,$(IMPLEMENTATIONS), \
+        $(foreach implementation,$($(unit)_IMPLEMENTATIONS), \
             $(eval $(call make_unit_target,$(unit),$(structure),$(implementation))) \
         ) \
     ) \
@@ -59,7 +63,7 @@ clean:
 PHONY_TARGETS := \
 	$(foreach unit,$(UNITS), \
 		$(foreach structure,$($(unit)_STRUCTURES), \
-			$(foreach implementation,$(IMPLEMENTATIONS), \
+			$(foreach implementation,$($(unit)_IMPLEMENTATIONS), \
 				$(unit)/$(structure)/$(implementation) \
 			) \
 		) \
