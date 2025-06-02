@@ -58,6 +58,16 @@ $ make test/<раздел>/<структура>/<реализация>
         - [На списке](src/elementary/deque/list/)
     - [Матрица](src/elementary/matrix/)
         - [Прямоугольная матрица(та, что из вышмата)](src/elementary/matrix/rectangular/)
+- [Таблицы](src/tables/)
+    - [Просматриваемые таблицы](src/tables/regular)
+        - [На векторе](src/tables/regular/vector)
+        - [На списке](src/tables/regular/list)
+    - [Индексируемые таблицы](src/tables/index)
+        - [Только на векторе](src/tables/index/vector)
+    - [Хэш таблицы](src/tables/hash)
+        - [Перемешивание сцеплением](src/tables/hash/chain)
+        - [Перемешивание сложением](src/tables/hash/sum) #скоро будет
+        - [Двойное сложение](src/tables/hash/double) #скоро будет
 
 ## Тесты
 Тесты лежат в папке [tests/](tests/). Если хотите, можете поиграться с ними
